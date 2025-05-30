@@ -46,11 +46,6 @@
   };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "br";
-    variant = "";
-  };
-
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
@@ -67,7 +62,16 @@
 
   
   services = {
+    libinput = {
+      touchpad = {
+        naturalScrolling = true;
+      };
+    };
     xserver = {
+      xkb = {
+      layout = "br";
+      variant = "";
+      };
       enable = true;
       displayManager.defaultSession = "none+i3";
       windowManager = {
@@ -93,7 +97,12 @@
      inputs.mad.zen-browser.packages."x86_64-linux".default
      gh
      git
-  ];
+  ]
+  #LSPs
+  ++ [
+     nixd
+    nixfmt-rfc-style 
+      ];
 
 programs.nm-applet.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
