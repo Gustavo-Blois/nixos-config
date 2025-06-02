@@ -6,15 +6,15 @@
     zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
-  outputs = mad: {
+  outputs = inputs :{
 
-  nixosConfigurations."MetalQueerSolid" = mad.nixpkgs.lib.nixosSystem{
+  nixosConfigurations."MetalQueerSolid" = inputs.nixpkgs.lib.nixosSystem{
     system = "x86_64-linux";
     modules = [
       ./configuration.nix
     ];
     specialArgs = {
-      inherit mad;
+      inherit inputs;
     };
   };
 

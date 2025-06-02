@@ -2,9 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }
-@inputs:
-
+{ config, pkgs, inputs, ... }
+:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -16,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  
+
   networking.hostName = "MetalQueerSolid"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -60,17 +59,16 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  
-  config.services.postgresql = {
-    enable = true;
-    ensureDatabases = [ "mydatabase" ];
-    authentication = pkgs.lib.mkOverride 10 ''
-      #type database  DBuser  auth-method
-      local all       all     trust
-    '';
-  };
   services = {
-    libinput = {
+    postgresql = {
+        enable = true;
+        ensureDatabases = [ "mydatabase" ];
+        authentication = pkgs.lib.mkOverride 10 ''
+          #type database  DBuser  auth-method
+          local all       all     trust
+        '';
+        };
+        libinput = {
       touchpad = {
         naturalScrolling = true;
       };
@@ -102,7 +100,7 @@
      firefox
      alacritty
      helix
-     inputs.mad.zen-browser.packages."x86_64-linux".default
+     inputs.zen-browser.packages."x86_64-linux".default
      gh
      git
   ]
