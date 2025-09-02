@@ -19,13 +19,13 @@
       Phosphophyllite = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-		      ./phosphophyllite.nix
+		      ./phosphophyllite
 		     ];
       };
       AtomHeartOtter = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-		      ./configuration.nix
+		      ./atomheartotter
 		     ];
       };
     };
