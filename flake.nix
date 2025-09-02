@@ -16,14 +16,18 @@
   in {
 
     nixosConfigurations = {
-
+      Phosphophyllite = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+		      ./phosphophyllite.nix
+		     ];
+      };
       AtomHeartOtter = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
 		      ./configuration.nix
 		     ];
       };
-
     };
   };
 }
