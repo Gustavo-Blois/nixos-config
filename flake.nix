@@ -20,12 +20,14 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
 		      ./phosphophyllite
+		      ./common
 		     ];
       };
       AtomHeartOtter = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
 		      ./atomheartotter
+		      ./common
 		     ];
       };
     };
