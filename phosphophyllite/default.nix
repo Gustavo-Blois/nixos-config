@@ -81,7 +81,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "Gundrisse";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout"];
     packages = with pkgs; [
     #x  thunderbird
     ];
