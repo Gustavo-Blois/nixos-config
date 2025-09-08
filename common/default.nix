@@ -7,7 +7,7 @@
     enableCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
-    shellInit = ''eval "$(direnv hook zsh)"'';
+    shellInit = '''';
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake .#$HOSTNAME";
     };
@@ -27,6 +27,5 @@
   [
     minicom
     usbutils
-    direnv
   ];
 }
