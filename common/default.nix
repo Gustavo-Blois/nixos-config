@@ -23,7 +23,7 @@
 
 
   services.udev.extraRules = ''
-SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660",GROUP="dialout"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660",GROUP="dialout", USER="gundrisse"
   '';
 
   environment.systemPackages = with pkgs;
