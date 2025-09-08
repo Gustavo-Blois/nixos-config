@@ -80,23 +80,6 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    shellAliases = {
-      nrs = "sudo nixos-rebuild switch --flake .#$HOSTNAME";
-    };
-    ohMyZsh = {
-      enable = true;
-      plugins = [
-        "git"
-        "z"
-      ];
-      theme = "linuxonly";
-    };
-  };
   users.users.tsela = {
     shell = pkgs.zsh;
     isNormalUser = true;
