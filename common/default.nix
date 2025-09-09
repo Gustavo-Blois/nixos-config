@@ -20,6 +20,11 @@
       theme = "linuxonly";
     };
   };
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
+
 
 
   services.udev.extraRules = ''
@@ -30,5 +35,6 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660"
   [
     minicom
     usbutils
+    distrobox
   ];
 }
