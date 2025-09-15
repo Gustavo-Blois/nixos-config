@@ -21,6 +21,7 @@
     };
   };
 
+  environment.localBinInPath = true;
 
   services.udev.extraRules = ''
 SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660",GROUP="dialout", OWNER="gundrisse"
@@ -30,5 +31,9 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660"
   [
     minicom
     usbutils
+    yt-dlp
+    wineWowPackages.stable
+    winetricks
+    wineWowPackages.waylandFull
   ];
 }
