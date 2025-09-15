@@ -86,10 +86,6 @@
     #x  thunderbird
     ];
   };
-virtualisation.podman = {
-  enable = true;
-  dockerCompat = true;
-};
 
 
   # Allow unfree packages
@@ -127,7 +123,6 @@ virtualisation.podman = {
      direnv
 
      #VMs & containers
-     distrobox
   ]
     ++ [
       inputs.zen-browser.packages.${pkgs.system}.default
