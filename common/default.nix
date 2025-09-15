@@ -36,13 +36,10 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660"
   [
     minicom
     usbutils
-<<<<<<< HEAD
     yt-dlp
     wineWowPackages.stable
     winetricks
     wineWowPackages.waylandFull
-=======
     distrobox
->>>>>>> 19ff574263b6ec195fe883e9933e053d8cb36827
   ];
 }
