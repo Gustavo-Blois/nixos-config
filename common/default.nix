@@ -34,6 +34,7 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660"
 
   environment.systemPackages = with pkgs;
   [
+    python3
     minicom
     usbutils
     yt-dlp
