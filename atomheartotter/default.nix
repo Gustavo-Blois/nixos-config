@@ -94,6 +94,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  #teamviewer
+  services.teamviewer.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   fonts.packages = with pkgs; [
@@ -124,7 +127,6 @@
      ## misc
      nil
      direnv
-     teamviewer
   ]
     ++ [
       inputs.zen-browser.packages.${pkgs.system}.default
