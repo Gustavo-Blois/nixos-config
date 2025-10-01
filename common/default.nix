@@ -44,5 +44,6 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660"
     wineWowPackages.waylandFull
     distrobox
     qemu
+    qtemu
   ];
 }
