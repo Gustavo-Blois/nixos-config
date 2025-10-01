@@ -25,6 +25,7 @@
     dockerCompat = true;
   };
 
+  virtualisation.vmware.host.enable = true;
 
   environment.localBinInPath = true;
 
@@ -43,7 +44,5 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660"
     winetricks
     wineWowPackages.waylandFull
     distrobox
-    qemu
-    qtemu
   ];
 }
