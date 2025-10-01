@@ -124,6 +124,7 @@
      ## misc
      nil
      direnv
+     teamviewer
   ]
     ++ [
       inputs.zen-browser.packages.${pkgs.system}.default
