@@ -25,7 +25,12 @@
     dockerCompat = true;
   };
 
-  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host = {
+    enable = true;
+    enableKvm = true;
+    enableExtensionPack = true;
+    addNetworkInterface = false;
+  };
 
   environment.localBinInPath = true;
 
@@ -44,5 +49,6 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d4", MODE="0660"
     winetricks
     wineWowPackages.waylandFull
     distrobox
+    ghidra
   ];
 }
